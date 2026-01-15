@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PaginaBase } from "./components/PaginaBase";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { Dashboard } from "./pages/Dashboard";
 
 const darkTheme = createTheme({
   palette: {
@@ -26,7 +27,9 @@ function AppRoutes() {
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <Routes>
-          <Route path="/" element={<PaginaBase />}></Route>
+          <Route path="/" element={<PaginaBase />}>
+            <Route index element={<Dashboard />} />
+          </Route>
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
