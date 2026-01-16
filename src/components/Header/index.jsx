@@ -1,7 +1,7 @@
-import { Box, Link, Typography } from "@mui/material";
-import { Landmark } from "lucide-react";
+import { Box, Divider, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
+import { FaLandmark } from "react-icons/fa";
 
 export const Header = () => {
   const theme = useTheme();
@@ -13,14 +13,15 @@ export const Header = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        mt: 5,
+        py: 5,
+        borderBottom: 1
       }}
     >
       <Box
         component="div"
         sx={{ display: "flex", alignItems: "center", gap: 2 }}
       >
-        <Landmark color="#3B82F6" strokeWidth={2.5} size={30} />
+        <FaLandmark color="#3B82F6" strokeWidth={2.5} size={30} />
         <Typography variant="h1" sx={{ fontSize: 24, fontWeight: 600 }}>
           BrasilDeputados
         </Typography>
